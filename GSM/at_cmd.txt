@@ -1,0 +1,7 @@
+AT+CSQ              #check signal check number @ Signal.txt
+AT+CSPN?            #check get the service provider name from sim
+AT+CMGR=1           #read message
+AT+CMGD=1           #delete message
+AT+CPMS=?           #PREFFERED SIM MESSAAGE STORAGE
+AT+CMGL             #read new messages
+AT+CMGL="ALL"       #read all messages

@@ -1,0 +1,52 @@
+(A converged post for the FAQ from everyones contributions. Feel free to submit corrections.)
+
+You can get a signal strength reading by issuing an AT+CSQ to the modem. You will get a number on a scale of 0 to 31 with 0 being worst (< -113db) and 31 (> -51db) being best.
+
+To calculate the actual receive level, issue the AT+CSQ command to the card. Take the number before the ,99 and multiply it by 2. Subtract that figure from -113dBm and that will give you your signal reading in dBm.
+
+For example, a value of 13 results in -113dBm - (13x2) = -87dBm
+
+and 17 in -113dBm - (17x2) = -79dBm.
+
+For those who need to START -> RUN -> CALC to figure this out, here's the easy way...
+
+0 < -113 dBm
+1 -111 dBm
+2 -109 dBm
+3 -107 dBm
+4 -105 dBm
+5 -103 dBm
+6 -101 dBm
+7 -99 dBm
+8 -97 dBm
+9 -95 dBm
+10 -93 dBm
+11 -91 dBm
+12 -89 dBm
+13 -87 dBm
+14 -85 dBm
+15 -83 dBm
+16 -81 dBm
+17 -79 dBm
+18 -77 dBm
+19 -75 dBm
+20 -73 dBm
+21 -71 dBm
+22 -69 dBm
+23 -67 dBm
+24 -65 dBm
+25 -63 dBm
+26 -61 dBm
+27 -59 dBm
+28 -57 dBm
+29 -55 dBm
+30 -53 dBm
+31 > -51 dBm
+
+Marginal - Levels of -95dBm or lower. At these sort of levels, it is very likely that you may suffer low throughput and disconnects due to cell loading/breathing even with an outdoor antenna.
+
+Workable under most conditions - Levels of -85dBm to -95dBm. Probably worth considering an outdoor gain type antenna. Could suffer poor throughput and disconnects due to cell loading/breathing.
+
+Good - Levels between -75dBm and -85dBm - normally no problem holding a connection with this sort of level (even with cell breathing) without the use of an external antenna.
+
+Excellent - levels above -75dBm. Should not be affected by cell breathing/loading and should not require an external antenna.
